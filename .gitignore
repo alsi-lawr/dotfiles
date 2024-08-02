@@ -1,0 +1,7 @@
+.oh-my-zsh/
+.vim/
+.cache/
+.config/*
+fzf-git.sh/
+.nvm/
+!.config/nvim/
