@@ -79,6 +79,7 @@ sudo curl -fLo /usr/share/config/.vim/autoload/plug.vim --create-dirs https://ra
 sudo chmod -R 777 /usr/share/config/.vim
 
 # ---- wsl ----
+sudo chmod +777 /etc/wsl.conf
 sudo cat ./wsl.conf > /etc/wsl.conf
 
 # ---- dotnet ----
