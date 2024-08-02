@@ -51,7 +51,7 @@ git clone https://github.com/junegunn/fzf-git.sh.git /usr/share/config/fzf-git.s
 # ---- bat ----
 brew install bat
 mkdir -p /usr/share/config/.config/bat/themes
-curl -o /usr/share/config/.config/bat/themes https://raw.githubusercontent.com/folke/tokyonight.nvim/main/extras/sublime/tokyonight_night.tmTheme
+curl -o /usr/share/config/.config/bat/themes/tokyonight_night.tmTheme https://raw.githubusercontent.com/folke/tokyonight.nvim/main/extras/sublime/tokyonight_night.tmTheme
 bat cache --build
 
 # ---- git-delta ----
