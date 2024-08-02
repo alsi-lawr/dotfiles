@@ -50,8 +50,8 @@ git clone https://github.com/junegunn/fzf-git.sh.git /usr/share/config/fzf-git.s
 
 # ---- bat ----
 brew install bat
-mkdir -p /usr/share/config/.config/bat/themes
-curl -o /usr/share/config/.config/bat/themes/tokyonight_night.tmTheme https://raw.githubusercontent.com/folke/tokyonight.nvim/main/extras/sublime/tokyonight_night.tmTheme
+sudo mkdir -p /usr/share/config/.config/bat/themes
+sudo curl -o /usr/share/config/.config/bat/themes/tokyonight_night.tmTheme https://raw.githubusercontent.com/folke/tokyonight.nvim/main/extras/sublime/tokyonight_night.tmTheme
 bat cache --build
 
 # ---- git-delta ----
@@ -75,6 +75,8 @@ sudo mkdir -p /etc/xdg/nvim
 sudo touch /etc/xdg/nvim/init.vim
 sudo chmod 777 /etc/xdg/nvim/init.vim
 sudo echo "source /usr/share/config/.config/nvim/init.vim" > /etc/xdg/nvim/init.vim
+sudo curl -fLo /usr/share/config/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+sudo chmod -R 777 /usr/share/config/.vim
 
 # ---- wsl ----
 sudo cat ./wsl.conf > /etc/wsl.conf
@@ -86,6 +88,7 @@ sudo ./temp/dotnet-install.sh --version latest --install-dir /usr/share/dotnet
 
 # ---- node ----
 sudo curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+
 
 # cleanup
 rm -rf ./temp
