@@ -21,12 +21,18 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(
   git
+  git-auto-fetch
+  git-flow
+  git-lfs
+  gitfast
+  gitignore
   nvm
   zsh-syntax-highlighting
   zsh-autosuggestions
   you-should-use
   docker
   docker-compose
+  dotnet
 )
 
 source $ZSH/oh-my-zsh.sh
