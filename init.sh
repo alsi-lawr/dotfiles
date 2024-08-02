@@ -87,8 +87,8 @@ sudo chmod +x ./temp/dotnet-install.sh
 sudo ./temp/dotnet-install.sh --version latest --install-dir /usr/share/dotnet
 
 # ---- node ----
-sudo curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-
+brew install nvm
+nvm install --lts
 
 # cleanup
 rm -rf ./temp
