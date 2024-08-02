@@ -67,5 +67,5 @@ sudo chmod 777 /etc/xdg/nvim/init.vim
 sudo echo "source /usr/share/config/.config/nvim/init.vim" > /etc/xdg/nvim/init.vim
 
 # ---- wsl ----
-
+sudo cat ./wsl.conf > /etc/wsl.conf
 
