@@ -91,6 +91,9 @@ _fzf_comprun() {
   esac
 }
 
+# ---- Bat (better cat) ----
+export BAT_THEME=tokynight_night
+
 # ---- Eza (better ls) -----
 
 alias ls="eza --color=always --git --no-filesize --icons=always -1"
@@ -118,8 +121,8 @@ export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools:/home/alex/.dotnet/tools
 zstyle ':completion:*:*:docker:*' option-stacking yes
 zstyle ':completion:*:*:docker-*:*' option-stacking yes
 
-# ---- xubuntu ----
-#export DISPLAY=$(grep nameserver /etc/resolv.conf | awk '{print $2}'):0
+# ---- git ----
+export GIT_CONFIG_SYSTEM=$SHARED_CONF/gitconfig
 
 # ---- custom aliases ----
 alias clr="clear"
@@ -128,3 +131,5 @@ alias vim="nvim"
 alias nano="nvim"
 alias winclip='$SHARED_CONF/bin/clip.exe'
 alias re-source='source $SHARED_CONF/.zshrc'
+
+
