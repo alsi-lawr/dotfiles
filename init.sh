@@ -24,12 +24,12 @@ else
     echo "SHELL=/bin/zsh" >> /etc/default/useradd
 fi
 # use shared .zshrc
-cat << EOF >> /etc/zsh/zshrc
+sudo bash -c 'cat << EOF >> /etc/zsh/zshrc
 
 if [ -f /usr/share/config/.zshrc ]; then
      source /usr/share/config/.zshrc
 fi
-EOF
+EOF'
 
 # ---- oh-my-zsh ----
 curl -o ./temp/install_ohmyzsh.sh https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
