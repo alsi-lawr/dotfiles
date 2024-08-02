@@ -93,7 +93,7 @@ _fzf_comprun() {
 
 # ---- Bat (better cat) ----
 export BAT_CONFIG_DIR=$SHARED_CONF/.config/bat
-bat cache --build
+bat cache --build > /dev/null
 export BAT_THEME=tokyonight_night
 
 # ---- Eza (better ls) -----
