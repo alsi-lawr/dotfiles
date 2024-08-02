@@ -88,4 +88,4 @@ sudo ./temp/dotnet-install.sh --version latest --install-dir /usr/share/dotnet
 sudo curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 
 # cleanup
-rm-rf ./temp
+rm -rf ./temp
