@@ -1,7 +1,12 @@
 #!/bin/bash
-# Install linux brew
 mkdir temp
-curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
+sudo apt update
+sudo apt upgrade -y
+
+# Install linux brew
+curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh -o ./temp/brew_install.sh
+sudo chmod +x ./temp/brew_install.sh
+./temp/brew_install.sh
 
 echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.profile
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
@@ -21,7 +26,7 @@ fi
 
 # ---- oh-my-zsh ----
 curl -o ./temp/install_ohmyzsh.sh https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
-chmod +x ./temp/install_ohmyzsh.sh
+sudo chmod +x ./temp/install_ohmyzsh.sh
 export ZSH=/usr/share/config/.oh-my-zsh
 ./temp/install_ohmyzsh.sh --unattended --keep-zshrc
 
@@ -55,7 +60,12 @@ brew install thefuck
 brew install zoxide
 
 # ---- neovim ----
-apt install -y neovim
-mkdir -p /etc/xdg/nvim
-touch /etc/xdg/nvim/init.vim
-echo "source /usr/share/config/.config/nvim/init.vim" >> /etc/xdg/nvim/init.vim
+sudo apt install -y neovim
+sudo mkdir -p /etc/xdg/nvim
+sudo touch /etc/xdg/nvim/init.vim
+sudo chmod 777 /etc/xdg/nvim/init.vim
+sudo echo "source /usr/share/config/.config/nvim/init.vim" > /etc/xdg/nvim/init.vim
+
+# ---- wsl ----
+
+
