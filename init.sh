@@ -23,6 +23,13 @@ if grep -q "^SHELL=" /etc/default/useradd; then
 else
     echo "SHELL=/bin/zsh" >> /etc/default/useradd
 fi
+# use shared .zshrc
+cat << EOF >> /etc/zsh/zshrc
+
+if [ -f /usr/share/config/.zshrc ]; then
+     source /usr/share/config/.zshrc
+fi
+EOF
 
 # ---- oh-my-zsh ----
 curl -o ./temp/install_ohmyzsh.sh https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
@@ -34,15 +41,15 @@ export ZSH=/usr/share/config/.oh-my-zsh
 git clone https://github.com/MichaelAquilina/zsh-you-should-use.git /usr/share/config/.oh-my-zsh/custom/plugins/you-should-use
 git clone https://github.com/zsh-users/zsh-autosuggestions /usr/share/config/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting /usr/share/config/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git /usr/share/config/.oh-my-zsh/custom/themes/powerlevel10k
 
 # ---- fzf & fd ----
 brew install fzf
 brew install fd
-git clone https://github.com/junegunn/fzf-git.sh.git /usr/share/config
+git clone https://github.com/junegunn/fzf-git.sh.git /usr/share/config/fzf-git.sh
 
 # ---- bat ----
 brew install bat
-bat cache -c --target /usr/share/config/.config/bat
 mkdir -p /usr/share/config/.config/bat/themes
 curl -o /usr/share/config/.config/bat/themes https://raw.githubusercontent.com/folke/tokyonight.nvim/main/extras/sublime/tokyonight_night.tmTheme
 bat cache --build
@@ -52,6 +59,9 @@ brew install git-delta
 
 # ---- eza ----
 brew install eza
+
+# ---- tldr ----
+brew install tlrc
 
 # ---- the fuck ----
 brew install thefuck
@@ -69,3 +79,13 @@ sudo echo "source /usr/share/config/.config/nvim/init.vim" > /etc/xdg/nvim/init.
 # ---- wsl ----
 sudo cat ./wsl.conf > /etc/wsl.conf
 
+# ---- dotnet ----
+wget https://dot.net/v1/dotnet-install.sh -O ./temp/dotnet-install.sh
+sudo chmod +x ./temp/dotnet-install.sh
+sudo ./temp/dotnet-install.sh --version latest --install-dir /usr/share/dotnet
+
+# ---- node ----
+sudo curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+
+# cleanup
+rm-rf ./temp
