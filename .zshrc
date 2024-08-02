@@ -132,7 +132,8 @@ alias cat="bat"
 alias vim="nvim"
 alias nano="nvim"
 alias winclip='$SHARED_CONF/bin/clip.exe'
-alias wincopy='bat --paging=never "$1" | winclip'
 alias re-source='source $SHARED_CONF/.zshrc'
 
-
+function wincopy() {
+    bat --paging=never "$1" | winclip
+}
