@@ -3,10 +3,10 @@ function init_dir() {
     sudo mkdir -p /usr/share/config
     sudo git clone https://github.com/alex-lawrence-conf/wsl-ubuntu-conf.git /usr/share/config
     sudo chmod -R +777 /usr/share/config
-    sudo cd /usr/share/config
-    rm .zshrc
-    touch .zshrc
-    chmod +x .zshrc
+    cd /usr/share/config
+    sudo rm .zshrc
+    sudo touch .zshrc
+    sudo chmod +x .zshrc
     echo "source \"\$SHARED_CONF/zshconfig/base_config.zsh\"" > .zshrc
 
     mkdir temp
