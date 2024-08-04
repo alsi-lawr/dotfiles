@@ -9,7 +9,8 @@ function init_dir() {
     sudo touch .zshrc
     sudo chmod +x .zshrc
     sudo chmod +777 .zshrc
-    echo "SHARED_CONF=/usr/share/config \nsource \"\$SHARED_CONF/zshconfig/base_config.zsh\"" > .zshrc
+    echo "SHARED_CONF=/usr/share/config" > .zshrc
+    echo "source \"\$SHARED_CONF/zshconfig/base_config.zsh\"" >> .zshrc
 
     mkdir temp
     echo "Installing brew..."
