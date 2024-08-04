@@ -10,5 +10,5 @@ USE_DEFAULT_P10K=$(gum choose "Use default powerlevel10k config" "Configure it m
 if [[ "$USE_DEFAULT_P10K" == *"myself"* ]]; then
     p10k configure
 else
-    echo $"source \"\$SHARED_CONF/zshconfig/p10k/default_p10k.zsh\"" >> $SHARED_CONF/.zshrc
+    echo "source \"\$SHARED_CONF/zshconfig/p10k/default_p10k.zsh\"" >> $SHARED_CONF/.zshrc
 fi

@@ -90,6 +90,8 @@ function install_zoxide() {
 
 # ---- neovim ----
 function install_neovim() {
+    sudo apt install -y gcc
+    sudo apt install -y make
     sudo apt install -y neovim
     sudo chmod -R 777 /usr/share/config/.config
 }
