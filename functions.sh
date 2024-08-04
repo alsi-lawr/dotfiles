@@ -16,12 +16,9 @@ function install_zsh() {
     fi
     
     # use shared .zshrc
-    sudo bash -c 'cat << EOF >> /etc/zsh/zshrc
-    
-    if [ -f /usr/share/config/.zshrc ]; then
-         source /usr/share/config/.zshrc
-    fi
-    EOF'
+    sudo echo "if [ -f /usr/share/config/.zshrc ]; then" >> /etc/zsh/zshrc
+    sudo echo "source /usr/share/config/.zshrc" >> /etc/zsh/zshrc
+    sudo echo "fi" >> /etc/zsh/zshrc
 }
 
 # ---- oh-my-zsh ----
