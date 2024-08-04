@@ -4,7 +4,7 @@ function init_dir() {
     sudo git clone https://github.com/alex-lawrence-conf/wsl-ubuntu-conf.git /usr/share/config
     sudo chmod -R +777 /usr/share/config
     cd /usr/share/config
-    sudo rm .zshrc
+    echo "" > .zshrc
     sudo touch .zshrc
     sudo chmod +x .zshrc
     echo "source \"\$SHARED_CONF/zshconfig/base_config.zsh\"" > .zshrc
