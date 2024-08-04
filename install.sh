@@ -12,8 +12,8 @@ function init_dir() {
 
     mkdir temp
     echo "Installing brew..."
-    sudo apt update > /dev/null
-    sudo apt upgrade -y > /dev/null
+    sudo apt update
+    sudo apt upgrade -y
     
     # Install linux brew
     curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh -o ./temp/brew_install.sh > /dev/null
