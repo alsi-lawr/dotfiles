@@ -41,3 +41,12 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # ---- git ----
 export GIT_CONFIG_SYSTEM=$SHARED_CONF/gitconfig
+eval $(ssh-agent -s) > /dev/null
+
+# Loop through each private key file in the .ssh directory
+for key in ~/.ssh/*; do
+    # Check if the file is a private key (exclude known public key and config files)
+    if [[ -f "$key" && "$key" != *.pub && "$key" != *config && "$key" != *known_hosts && $(file -b --mime-type "$key") == "application/octet-stream" ]]; then
+        ssh-add "$key" 2>/dev/null        
+    fi
+done
