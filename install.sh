@@ -7,6 +7,7 @@ function init_dir() {
     echo "" > .zshrc
     sudo touch .zshrc
     sudo chmod +x .zshrc
+    sudo chmod +777 .zshrc
     echo "source \"\$SHARED_CONF/zshconfig/base_config.zsh\"" > .zshrc
 
     mkdir temp
