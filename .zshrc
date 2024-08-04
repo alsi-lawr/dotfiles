@@ -1,5 +1,6 @@
 export SHARED_CONF="/usr/share/config"
 export ZSH_DISABLE_COMPFIX=true
+export XDG_CONFIG_HOME="/usr/share/config/.config"
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -120,9 +121,9 @@ export NVM_DIR="$SHARED_CONF/.nvm"
   [ -s "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# ---- dotnet tools ----
+# ---- dotnet tools & path ----
 export DOTNET_ROOT=/usr/share/dotnet
-export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools:/home/alex/.dotnet/tools
+export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
 
 # ---- docker ----
 # allows for autocomplete on stacked commands like -it
@@ -137,9 +138,13 @@ alias clr="clear"
 alias cat="bat"
 alias vim="nvim"
 alias nano="nvim"
-alias winclip='$SHARED_CONF/bin/clip.exe'
-alias re-source='source $SHARED_CONF/.zshrc'
+alias winclip="$SHARED_CONF/bin/clip.exe"
+alias re-source="source $SHARED_CONF/.zshrc"
+alias tree="ls --tree"
+alias nvimkeybind="zsh $SHARED_CONF/scripts/nvim_keybind.sh"
 
 function wincopy() {
     bat --paging=never "$1" | winclip
 }
+
+
