@@ -1,31 +1,4 @@
 #!/bin/bash
-function init_dir() {
-    sudo mkdir -p /usr/share/config
-    sudo git clone https://github.com/alex-lawrence-conf/wsl-ubuntu-conf.git /usr/share/config
-    sudo chmod -R +777 /usr/share/config
-    cd /usr/share/config
-    echo "" > .zshrc
-    sudo touch .zshrc
-    sudo chmod +x .zshrc
-    sudo chmod +777 .zshrc
-    echo "source \"\$SHARED_CONF/zshconfig/base_config.zsh\"" > .zshrc
-
-    mkdir temp
-    echo "Installing brew..."
-    sudo apt update
-    sudo apt upgrade -y
-    
-    # Install linux brew
-    curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh -o ./temp/brew_install.sh > /dev/null
-    sudo chmod +x ./temp/brew_install.sh
-    ./temp/brew_install.sh
-    
-    echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.profile
-    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)" > /dev/null
-    
-    brew install gum
-}
-
 # ---- zsh ----
 function install_zsh() {
     sudo apt install -y zsh
