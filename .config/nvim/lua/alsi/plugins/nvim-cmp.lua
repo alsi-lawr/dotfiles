@@ -27,7 +27,7 @@ return {
 					luasnip.lsp_expand(args.body)
 				end,
 			},
-			mapping = cmp.mapping.preset.insert({
+			mapping = cmp.mapping({
 				["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
 				["<C-j>"] = cmp.mapping.select_next_item(), -- next suggestion
 				["<C-F>"] = cmp.mapping.scroll_docs(-4),
@@ -36,7 +36,16 @@ return {
 				["<C-e>"] = cmp.mapping.abort(), -- close completion window
 				["<CR>"] = cmp.mapping.confirm({ select = false }),
 				["<Tab>"] = cmp.mapping.confirm({ select = true }),
+				["<Up>"] = cmp.mapping(function(fallback)
+					cmp.close()
+					fallback()
+				end, { "i" }),
+				["<Down>"] = cmp.mapping(function(fallback)
+					cmp.close()
+					fallback()
+				end, { "i" }),
 			}),
+
 			-- sources for autocompletion
 			sources = cmp.config.sources({
 				{ name = "nvim_lsp" },
