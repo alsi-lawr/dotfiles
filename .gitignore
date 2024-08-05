@@ -1,3 +1,6 @@
+.rustup/
+.cargo
+./custom_lsp/**
 temp/
 .oh-my-zsh/
 .vim/

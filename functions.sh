@@ -42,7 +42,7 @@ function install_fzf() {
     brew install fzf
     brew install fd
     git clone https://github.com/junegunn/fzf-git.sh.git /usr/share/config/fzf-git.sh
-    echo "source \"\$SHARED_CONF/zshconfig/fzf_config.zsh\"" >> ./.zshrc 
+    add_to_zshrc "source \"\$SHARED_CONF/zshconfig/fzf_config.zsh\"" 
 }
 
 # ---- bat ----
@@ -51,7 +51,7 @@ function install_bat() {
     sudo mkdir -p /usr/share/config/.config/bat/themes
     sudo curl -o /usr/share/config/.config/bat/themes/tokyonight_night.tmTheme https://raw.githubusercontent.com/folke/tokyonight.nvim/main/extras/sublime/tokyonight_night.tmTheme
     bat cache --build
-    echo "source \"\$SHARED_CONF/zshconfig/bat_config.zsh\"" >> ./.zshrc 
+    add_to_zshrc "source \"\$SHARED_CONF/zshconfig/bat_config.zsh\"" 
 }
 
 # ---- git-delta ----
@@ -63,7 +63,7 @@ function install_git_delta() {
 function install_eza() {
     brew install eza
 
-    echo "source \"\$SHARED_CONF/zshconfig/eza_config.zsh\"" >> ./.zshrc 
+    add_to_zshrc "source \"\$SHARED_CONF/zshconfig/eza_config.zsh\"" 
 }
 
 # ---- tldr ----
@@ -75,14 +75,14 @@ function install_tldr() {
 function install_thefuck() {
     brew install thefuck
 
-    echo "source \"\$SHARED_CONF/zshconfig/tf_config.zsh\"" >> ./.zshrc 
+    add_to_zshrc "source \"\$SHARED_CONF/zshconfig/tf_config.zsh\"" 
 }
 
 # ---- zoxide ----
 function install_zoxide() {
     brew install zoxide
 
-    echo "source \"\$SHARED_CONF/zshconfig/zoxide_config.zsh\"" >> ./.zshrc 
+    add_to_zshrc "source \"\$SHARED_CONF/zshconfig/zoxide_config.zsh\"" 
 }
 
 # ---- neovim ----
@@ -91,6 +91,7 @@ function install_neovim() {
     sudo apt install -y make
     sudo apt install -y neovim
     sudo chmod -R 777 /usr/share/config/.config
+    add_to_zshrc "source \"\$SHARED_CONF/zshconfig/nvim_config.zsh\""
 }
 
 # ---- wsl ----
@@ -104,14 +105,14 @@ function install_dotnet() {
     wget https://dot.net/v1/dotnet-install.sh -O ./temp/dotnet-install.sh
     sudo chmod +x ./temp/dotnet-install.sh
     sudo ./temp/dotnet-install.sh --version latest --install-dir /usr/share/dotnet > /dev/null
-    echo "source \"\$SHARED_CONF/zshconfig/dotnet_config.zsh\"" >> ./.zshrc
+    add_to_zshrc "source \"\$SHARED_CONF/zshconfig/dotnet_config.zsh\""
 }
 
 # ---- node ----
 function install_node() {
     brew install nvm
     nvm install --lts
-    echo "source \"\$SHARED_CONF/zshconfig/node_config.zsh\"" >> ./.zshrc
+    add_to_zshrc "source \"\$SHARED_CONF/zshconfig/node_config.zsh\""
 }
 
 # ---- glow ----
@@ -136,15 +137,37 @@ function install_docker() {
     sudo apt-get update
     
     sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-    echo "source \"\$SHARED_CONF/zshconfig/docker_config.zsh\"" >> ./.zshrc
+    add_to_zshrc "source \"\$SHARED_CONF/zshconfig/docker_config.zsh\""
 }
 
 # ---- custom aliases ----
 function add_custom_aliases() {
-    echo "source \"\$SHARED_CONF/zshconfig/custom_aliases.zsh\"" >> ./.zshrc
+    add_to_zshrc "source \"\$SHARED_CONF/zshconfig/custom_aliases.zsh\""
 }
 
 # ---- add wincopy ----
 function add_wincopy() {
-    echo "source \"\$SHARED_CONF/zshconfig/wincopy_config.zsh\"" >> ./.zshrc
+    add_to_zshrc "source \"\$SHARED_CONF/zshconfig/wincopy_config.zsh\""
+}
+
+function install_postgres_lsp() {
+
+}
+
+function install_cargo_rust() {
+    export CARGO_HOME="/usr/share/config/.cargo"
+    export RUSTUP_HOME="/usr/share/config/.rustup"
+    curl https://sh.rustup.rs -sSf | sh
+    add_to_zshrc "source \"\$SHARED_CONF/zshconfig/cargo_config.zsh\""
+}
+
+function add_to_zshrc(){
+    local LINE_TO_ADD=$1
+
+    grep -qF -- "$LINE_TO_ADD" "./.zshrc"
+    local result=$?
+
+    if [[ $result -ne 0 ]]; then
+        echo "$LINE_TO_ADD" >> ./.zshrc
+    fi
 }
