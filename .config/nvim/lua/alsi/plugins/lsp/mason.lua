@@ -55,11 +55,10 @@ return {
 				"black", -- python formatter
 				"pylint",
 				"eslint_d",
-				"csharpier",
+				-- "csharpier",
 				"netcoredbg",
 				"chrome-debug-adapter",
 				"firefox-debug-adapter",
-				"yamllint",
 				"markdownlint",
 				"editorconfig-checker",
 			},

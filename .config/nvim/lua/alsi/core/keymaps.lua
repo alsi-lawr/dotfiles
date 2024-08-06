@@ -2,8 +2,7 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap
 
-keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
-
+keymap.set({ "i", "v" }, "<leader>jk", "<ESC>", { desc = "Exit mode with <leader>jk" })
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 
 -- increment/decrement numbers shorthands
@@ -25,3 +24,4 @@ keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer
 
 -- other keymaps
 keymap.set("n", "<C-b>", "<C-v>", { desc = "Enter visual block mode (fixes only being able to paste)" })
+keymap.set("n", "<leader>st", ":botright 10split | term<CR>", { desc = "Open terminal in a new horizontal split" })
