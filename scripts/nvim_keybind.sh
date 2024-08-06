@@ -20,11 +20,14 @@ function handle_interrupt {
 trap handle_interrupt SIGINT
 
 # Prompt for mode selection
-mode=$(gum choose "n" "i" "v" "x" "s" "o" "!" "c" "t")
-if [[ -z "$mode" ]]; then
+echo "Select modes (use space to select multiple, enter to confirm)"
+modes=($(gum choose --no-limit "n" "i" "v" "x" "s" "o" "c" "t"))
+if [[ -z "${modes[@]}" ]]; then
     echo "No mode selected. Exiting."
     exit 1
 fi
+
+mode_list=$(printf '"%s", ' ${modes[@]} | sed 's/, $//')
 
 # Prompt for keybinding
 keybinding=$(gum input --placeholder "Enter keybind (e.g., <leader>h)")
@@ -54,7 +57,7 @@ if [[ ! -f $KEYMAPS_FILE ]]; then
 fi
 
 # Append the new keybinding to the keymaps.lua file
-echo "keymap.set(\"$mode\", \"$keybinding\", \"$command\", { desc = \"$description\" })" | sudo tee -a $KEYMAPS_FILE > /dev/null
+echo "keymap.set({ $mode_list }, \"$keybinding\", \"$command\", { desc = \"$description\" })" | sudo tee -a $KEYMAPS_FILE > /dev/null
 
 echo "Keybinding added to $KEYMAPS_FILE"
 
