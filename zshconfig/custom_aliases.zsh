@@ -7,6 +7,7 @@ alias winclip="$SHARED_CONF/bin/clip.exe"
 alias re-source="source $SHARED_CONF/.zshrc"
 alias tree="ls --tree"
 alias nvimkeybind="zsh $SHARED_CONF/scripts/nvim_keybind.sh"
+alias gdev="git clone --branch develop"
 
 function refreshssh(){
     eval $(ssh-agent -s) > /dev/null

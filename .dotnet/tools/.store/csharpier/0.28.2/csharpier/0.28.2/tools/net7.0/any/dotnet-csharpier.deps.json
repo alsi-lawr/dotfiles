@@ -1,0 +1,583 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "dotnet-csharpier/0.28.2": {
+        "dependencies": {
+          "CSharpier.Core": "0.28.2",
+          "Ignore": "0.1.50",
+          "Microsoft.CodeAnalysis.PublicApiAnalyzers": "3.3.4",
+          "Microsoft.Extensions.Logging": "5.0.0",
+          "System.CommandLine": "2.0.0-beta1.21308.1",
+          "System.IO.Abstractions": "20.0.4",
+          "System.IO.Abstractions.TestingHelpers": "20.0.4",
+          "System.IO.Hashing": "8.0.0",
+          "System.Text.Encoding.CodePages": "8.0.0",
+          "YamlDotNet": "13.7.1",
+          "ini-parser-netstandard": "2.5.2",
+          "CSharpier": "0.28.2.0"
+        },
+        "runtime": {
+          "dotnet-csharpier.dll": {}
+        }
+      },
+      "Ignore/0.1.50": {
+        "runtime": {
+          "lib/netstandard2.0/Ignore.dll": {
+            "assemblyVersion": "0.1.0.0",
+            "fileVersion": "0.1.50.25509"
+          }
+        }
+      },
+      "ini-parser-netstandard/2.5.2": {
+        "runtime": {
+          "lib/netstandard2.0/INIFileParser.dll": {
+            "assemblyVersion": "2.5.2.0",
+            "fileVersion": "2.5.2.0"
+          }
+        }
+      },
+      "Microsoft.CodeAnalysis.Analyzers/3.3.4": {},
+      "Microsoft.CodeAnalysis.Common/4.8.0": {
+        "dependencies": {
+          "Microsoft.CodeAnalysis.Analyzers": "3.3.4",
+          "System.Collections.Immutable": "7.0.0",
+          "System.Reflection.Metadata": "7.0.0",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
+        "runtime": {
+          "lib/net7.0/Microsoft.CodeAnalysis.dll": {
+            "assemblyVersion": "4.8.0.0",
+            "fileVersion": "4.800.23.55801"
+          }
+        },
+        "resources": {
+          "lib/net7.0/cs/Microsoft.CodeAnalysis.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net7.0/de/Microsoft.CodeAnalysis.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net7.0/es/Microsoft.CodeAnalysis.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net7.0/fr/Microsoft.CodeAnalysis.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net7.0/it/Microsoft.CodeAnalysis.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net7.0/ja/Microsoft.CodeAnalysis.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net7.0/ko/Microsoft.CodeAnalysis.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net7.0/pl/Microsoft.CodeAnalysis.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/net7.0/pt-BR/Microsoft.CodeAnalysis.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net7.0/ru/Microsoft.CodeAnalysis.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net7.0/tr/Microsoft.CodeAnalysis.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net7.0/zh-Hans/Microsoft.CodeAnalysis.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net7.0/zh-Hant/Microsoft.CodeAnalysis.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
+      "Microsoft.CodeAnalysis.CSharp/4.8.0": {
+        "dependencies": {
+          "Microsoft.CodeAnalysis.Common": "4.8.0"
+        },
+        "runtime": {
+          "lib/net7.0/Microsoft.CodeAnalysis.CSharp.dll": {
+            "assemblyVersion": "4.8.0.0",
+            "fileVersion": "4.800.23.55801"
+          }
+        },
+        "resources": {
+          "lib/net7.0/cs/Microsoft.CodeAnalysis.CSharp.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net7.0/de/Microsoft.CodeAnalysis.CSharp.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net7.0/es/Microsoft.CodeAnalysis.CSharp.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net7.0/fr/Microsoft.CodeAnalysis.CSharp.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net7.0/it/Microsoft.CodeAnalysis.CSharp.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net7.0/ja/Microsoft.CodeAnalysis.CSharp.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net7.0/ko/Microsoft.CodeAnalysis.CSharp.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net7.0/pl/Microsoft.CodeAnalysis.CSharp.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/net7.0/pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net7.0/ru/Microsoft.CodeAnalysis.CSharp.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net7.0/tr/Microsoft.CodeAnalysis.CSharp.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net7.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net7.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
+      "Microsoft.CodeAnalysis.PublicApiAnalyzers/3.3.4": {},
+      "Microsoft.CSharp/4.4.1": {},
+      "Microsoft.Extensions.DependencyInjection/5.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0"
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/5.0.0": {},
+      "Microsoft.Extensions.Logging/5.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "5.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "5.0.0",
+          "Microsoft.Extensions.Options": "5.0.0"
+        }
+      },
+      "Microsoft.Extensions.Logging.Abstractions/5.0.0": {},
+      "Microsoft.Extensions.Options/5.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0",
+          "Microsoft.Extensions.Primitives": "5.0.0"
+        }
+      },
+      "Microsoft.Extensions.Primitives/5.0.0": {},
+      "System.Collections.Immutable/7.0.0": {},
+      "System.CommandLine/2.0.0-beta1.21308.1": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.4.1",
+          "System.Memory": "4.5.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.CommandLine.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.21.30801"
+          }
+        },
+        "resources": {
+          "lib/netstandard2.0/cs/System.CommandLine.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/netstandard2.0/de/System.CommandLine.resources.dll": {
+            "locale": "de"
+          },
+          "lib/netstandard2.0/es/System.CommandLine.resources.dll": {
+            "locale": "es"
+          },
+          "lib/netstandard2.0/fr/System.CommandLine.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/netstandard2.0/it/System.CommandLine.resources.dll": {
+            "locale": "it"
+          },
+          "lib/netstandard2.0/ja/System.CommandLine.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/netstandard2.0/ko/System.CommandLine.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/netstandard2.0/pl/System.CommandLine.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/netstandard2.0/pt-BR/System.CommandLine.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/netstandard2.0/ru/System.CommandLine.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/netstandard2.0/tr/System.CommandLine.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/netstandard2.0/zh-Hans/System.CommandLine.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/netstandard2.0/zh-Hant/System.CommandLine.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
+      "System.IO.Abstractions/20.0.4": {
+        "dependencies": {
+          "TestableIO.System.IO.Abstractions": "20.0.4",
+          "TestableIO.System.IO.Abstractions.Wrappers": "20.0.4"
+        },
+        "runtime": {
+          "lib/net7.0/System.IO.Abstractions.dll": {
+            "assemblyVersion": "20.0.0.0",
+            "fileVersion": "20.0.4.8906"
+          }
+        }
+      },
+      "System.IO.Abstractions.TestingHelpers/20.0.4": {
+        "dependencies": {
+          "TestableIO.System.IO.Abstractions.TestingHelpers": "20.0.4"
+        },
+        "runtime": {
+          "lib/net7.0/System.IO.Abstractions.TestingHelpers.dll": {
+            "assemblyVersion": "20.0.0.0",
+            "fileVersion": "20.0.4.8906"
+          }
+        }
+      },
+      "System.IO.Hashing/8.0.0": {
+        "runtime": {
+          "lib/net7.0/System.IO.Hashing.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.53103"
+          }
+        }
+      },
+      "System.Memory/4.5.4": {},
+      "System.Reflection.Metadata/7.0.0": {
+        "dependencies": {
+          "System.Collections.Immutable": "7.0.0"
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
+      "System.Text.Encoding.CodePages/8.0.0": {
+        "runtime": {
+          "lib/net7.0/System.Text.Encoding.CodePages.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.53103"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net7.0/System.Text.Encoding.CodePages.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.53103"
+          }
+        }
+      },
+      "System.Text.Encodings.Web/8.0.0": {
+        "runtime": {
+          "lib/net7.0/System.Text.Encodings.Web.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.53103"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/browser/lib/net7.0/System.Text.Encodings.Web.dll": {
+            "rid": "browser",
+            "assetType": "runtime",
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.53103"
+          }
+        }
+      },
+      "System.Text.Json/8.0.0": {
+        "dependencies": {
+          "System.Text.Encodings.Web": "8.0.0"
+        },
+        "runtime": {
+          "lib/net7.0/System.Text.Json.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.53103"
+          }
+        }
+      },
+      "TestableIO.System.IO.Abstractions/20.0.4": {
+        "runtime": {
+          "lib/net7.0/TestableIO.System.IO.Abstractions.dll": {
+            "assemblyVersion": "20.0.0.0",
+            "fileVersion": "20.0.4.8906"
+          }
+        }
+      },
+      "TestableIO.System.IO.Abstractions.TestingHelpers/20.0.4": {
+        "dependencies": {
+          "TestableIO.System.IO.Abstractions": "20.0.4",
+          "TestableIO.System.IO.Abstractions.Wrappers": "20.0.4"
+        },
+        "runtime": {
+          "lib/net7.0/TestableIO.System.IO.Abstractions.TestingHelpers.dll": {
+            "assemblyVersion": "20.0.0.0",
+            "fileVersion": "20.0.4.8906"
+          }
+        }
+      },
+      "TestableIO.System.IO.Abstractions.Wrappers/20.0.4": {
+        "dependencies": {
+          "TestableIO.System.IO.Abstractions": "20.0.4"
+        },
+        "runtime": {
+          "lib/net7.0/TestableIO.System.IO.Abstractions.Wrappers.dll": {
+            "assemblyVersion": "20.0.0.0",
+            "fileVersion": "20.0.4.8906"
+          }
+        }
+      },
+      "YamlDotNet/13.7.1": {
+        "runtime": {
+          "lib/net7.0/YamlDotNet.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.7.1.0"
+          }
+        }
+      },
+      "CSharpier.Core/0.28.2": {
+        "dependencies": {
+          "Microsoft.CodeAnalysis.CSharp": "4.8.0",
+          "System.IO.Abstractions": "20.0.4",
+          "System.Text.Json": "8.0.0"
+        },
+        "runtime": {
+          "CSharpier.dll": {}
+        }
+      },
+      "CSharpier/0.28.2.0": {
+        "runtime": {
+          "CSharpier.dll": {
+            "assemblyVersion": "0.28.2.0",
+            "fileVersion": "0.28.2.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "dotnet-csharpier/0.28.2": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Ignore/0.1.50": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nr7/KaY5KP9QvCEf478w1k9Yz+dXQZKLEAsjfhIjuneScmyLvMKoItPL6OfkNODeCrINtHEBt8A7q7yETS1PQQ==",
+      "path": "ignore/0.1.50",
+      "hashPath": "ignore.0.1.50.nupkg.sha512"
+    },
+    "ini-parser-netstandard/2.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rTyGzgT/a+mD2HxopOGpb/yWWhu5TTPgF59XUlHjhlNv7dbt9DME/qozIR7HreVAVpNnZSqP9A8TeViK5s949g==",
+      "path": "ini-parser-netstandard/2.5.2",
+      "hashPath": "ini-parser-netstandard.2.5.2.nupkg.sha512"
+    },
+    "Microsoft.CodeAnalysis.Analyzers/3.3.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AxkxcPR+rheX0SmvpLVIGLhOUXAKG56a64kV9VQZ4y9gR9ZmPXnqZvHJnmwLSwzrEP6junUF11vuc+aqo5r68g==",
+      "path": "microsoft.codeanalysis.analyzers/3.3.4",
+      "hashPath": "microsoft.codeanalysis.analyzers.3.3.4.nupkg.sha512"
+    },
+    "Microsoft.CodeAnalysis.Common/4.8.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/jR+e/9aT+BApoQJABlVCKnnggGQbvGh7BKq2/wI1LamxC+LbzhcLj4Vj7gXCofl1n4E521YfF9w0WcASGg/KA==",
+      "path": "microsoft.codeanalysis.common/4.8.0",
+      "hashPath": "microsoft.codeanalysis.common.4.8.0.nupkg.sha512"
+    },
+    "Microsoft.CodeAnalysis.CSharp/4.8.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+3+qfdb/aaGD8PZRCrsdobbzGs1m9u119SkkJt8e/mk3xLJz/udLtS2T6nY27OTXxBBw10HzAbC8Z9w08VyP/g==",
+      "path": "microsoft.codeanalysis.csharp/4.8.0",
+      "hashPath": "microsoft.codeanalysis.csharp.4.8.0.nupkg.sha512"
+    },
+    "Microsoft.CodeAnalysis.PublicApiAnalyzers/3.3.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kNLTfXtXUWDHVt5iaPkkiPuyHYlMgLI6SOFT4w88bfeI2vqSeGgHunFkdvlaCM8RDfcY0t2+jnesQtidRJJ/DA==",
+      "path": "microsoft.codeanalysis.publicapianalyzers/3.3.4",
+      "hashPath": "microsoft.codeanalysis.publicapianalyzers.3.3.4.nupkg.sha512"
+    },
+    "Microsoft.CSharp/4.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-A5hI3gk6WpcBI0QGZY6/d5CCaYUxJgi7iENn1uYEng+Olo8RfI5ReGVkjXjeu3VR3srLvVYREATXa2M0X7FYJA==",
+      "path": "microsoft.csharp/4.4.1",
+      "hashPath": "microsoft.csharp.4.4.1.nupkg.sha512"
+    },
+    "Microsoft.Extensions.DependencyInjection/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Rc2kb/p3Ze6cP6rhFC3PJRdWGbLvSHZc0ev7YlyeU6FmHciDMLrhoVoTUEzKPhN5ZjFgKF1Cf5fOz8mCMIkvpA==",
+      "path": "microsoft.extensions.dependencyinjection/5.0.0",
+      "hashPath": "microsoft.extensions.dependencyinjection.5.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ORj7Zh81gC69TyvmcUm9tSzytcy8AVousi+IVRAI8nLieQjOFryRusSFh7+aLk16FN9pQNqJAiMd7BTKINK0kA==",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/5.0.0",
+      "hashPath": "microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Logging/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MgOwK6tPzB6YNH21wssJcw/2MKwee8b2gI7SllYfn6rvTpIrVvVS5HAjSU2vqSku1fwqRvWP0MdIi14qjd93Aw==",
+      "path": "microsoft.extensions.logging/5.0.0",
+      "hashPath": "microsoft.extensions.logging.5.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Logging.Abstractions/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NxP6ahFcBnnSfwNBi2KH2Oz8Xl5Sm2krjId/jRR3I7teFphwiUoUeZPwTNA21EX+5PtjqmyAvKaOeBXcJjcH/w==",
+      "path": "microsoft.extensions.logging.abstractions/5.0.0",
+      "hashPath": "microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Options/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CBvR92TCJ5uBIdd9/HzDSrxYak+0W/3+yxrNg8Qm6Bmrkh5L+nu6m3WeazQehcZ5q1/6dDA7J5YdQjim0165zg==",
+      "path": "microsoft.extensions.options/5.0.0",
+      "hashPath": "microsoft.extensions.options.5.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Primitives/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cI/VWn9G1fghXrNDagX9nYaaB/nokkZn0HYAawGaELQrl8InSezfe9OnfPZLcJq3esXxygh3hkq2c3qoV3SDyQ==",
+      "path": "microsoft.extensions.primitives/5.0.0",
+      "hashPath": "microsoft.extensions.primitives.5.0.0.nupkg.sha512"
+    },
+    "System.Collections.Immutable/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dQPcs0U1IKnBdRDBkrCTi1FoajSTBzLcVTpjO4MBCMC7f4pDOIPzgBoX8JjG7X6uZRJ8EBxsi8+DR1JuwjnzOQ==",
+      "path": "system.collections.immutable/7.0.0",
+      "hashPath": "system.collections.immutable.7.0.0.nupkg.sha512"
+    },
+    "System.CommandLine/2.0.0-beta1.21308.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-X8qLygjyktfmcNMNFekMkumyaTblJmkH3BBbKiQlk4FvJfp613gkMKrA0CNqLUT9tEfLcm3XMzAbsiYFwM8zbQ==",
+      "path": "system.commandline/2.0.0-beta1.21308.1",
+      "hashPath": "system.commandline.2.0.0-beta1.21308.1.nupkg.sha512"
+    },
+    "System.IO.Abstractions/20.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Vv3DffYCM/DEQ7+9Dn7ydq852WSVtdeoLNlztIqaMAl4o6aALyAJQRTQ30d/3D7BVf5pALsGm22HYb4Y6h8xvw==",
+      "path": "system.io.abstractions/20.0.4",
+      "hashPath": "system.io.abstractions.20.0.4.nupkg.sha512"
+    },
+    "System.IO.Abstractions.TestingHelpers/20.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Dp6gPoqJ7i8dRGubfxzA219fFCtkam9BgSmuIT+fQcFPKkW6vx9PuLTSELsNq+gRoEAzxGbWjsT/3WslfcmRfg==",
+      "path": "system.io.abstractions.testinghelpers/20.0.4",
+      "hashPath": "system.io.abstractions.testinghelpers.20.0.4.nupkg.sha512"
+    },
+    "System.IO.Hashing/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ne1843evDugl0md7Fjzy6QjJrzsjh46ZKbhf8GwBXb5f/gw97J4bxMs0NQKifDuThh/f0bZ0e62NPl1jzTuRqA==",
+      "path": "system.io.hashing/8.0.0",
+      "hashPath": "system.io.hashing.8.0.0.nupkg.sha512"
+    },
+    "System.Memory/4.5.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1MbJTHS1lZ4bS4FmsJjnuGJOu88ZzTT2rLvrhW7Ygic+pC0NWA+3hgAen0HRdsocuQXCkUTdFn9yHJJhsijDXw==",
+      "path": "system.memory/4.5.4",
+      "hashPath": "system.memory.4.5.4.nupkg.sha512"
+    },
+    "System.Reflection.Metadata/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MclTG61lsD9sYdpNz9xsKBzjsmsfCtcMZYXz/IUr2zlhaTaABonlr1ESeompTgM+Xk+IwtGYU7/voh3YWB/fWw==",
+      "path": "system.reflection.metadata/7.0.0",
+      "hashPath": "system.reflection.metadata.7.0.0.nupkg.sha512"
+    },
+    "System.Runtime.CompilerServices.Unsafe/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
+      "path": "system.runtime.compilerservices.unsafe/6.0.0",
+      "hashPath": "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    },
+    "System.Text.Encoding.CodePages/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OZIsVplFGaVY90G2SbpgU7EnCoOO5pw1t4ic21dBF3/1omrJFpAGoNAVpPyMVOC90/hvgkGG3VFqR13YgZMQfg==",
+      "path": "system.text.encoding.codepages/8.0.0",
+      "hashPath": "system.text.encoding.codepages.8.0.0.nupkg.sha512"
+    },
+    "System.Text.Encodings.Web/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yev/k9GHAEGx2Rg3/tU6MQh4HGBXJs70y7j1LaM1i/ER9po+6nnQ6RRqTJn1E7Xu0fbIFK80Nh5EoODxrbxwBQ==",
+      "path": "system.text.encodings.web/8.0.0",
+      "hashPath": "system.text.encodings.web.8.0.0.nupkg.sha512"
+    },
+    "System.Text.Json/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OdrZO2WjkiEG6ajEFRABTRCi/wuXQPxeV6g8xvUJqdxMvvuCCEk86zPla8UiIQJz3durtUEbNyY/3lIhS0yZvQ==",
+      "path": "system.text.json/8.0.0",
+      "hashPath": "system.text.json.8.0.0.nupkg.sha512"
+    },
+    "TestableIO.System.IO.Abstractions/20.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zvuE3an8qmEjlz72ZKyW/gBZprR0TMTDxuw77i1OXi5wEagXRhHwP4lOaLvHIXNlwyCAmdmei6iLHsfsZcuUAA==",
+      "path": "testableio.system.io.abstractions/20.0.4",
+      "hashPath": "testableio.system.io.abstractions.20.0.4.nupkg.sha512"
+    },
+    "TestableIO.System.IO.Abstractions.TestingHelpers/20.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-O8YeM+jsunyWt4ch93QnvWmMN/uguU0uX2VvDEvlltOxxHfCOuy0jG9m9p/lys52orlbpRa/Rl6mMXwoK2tdcA==",
+      "path": "testableio.system.io.abstractions.testinghelpers/20.0.4",
+      "hashPath": "testableio.system.io.abstractions.testinghelpers.20.0.4.nupkg.sha512"
+    },
+    "TestableIO.System.IO.Abstractions.Wrappers/20.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LbVaZauZfCkcGmHyPhQ2yiKv5GQqTvMViPYd3NjU1tGxp0N2p7Oc6Q/2trN6ZNIZCr42ujJdYUB63hE4mtsHRQ==",
+      "path": "testableio.system.io.abstractions.wrappers/20.0.4",
+      "hashPath": "testableio.system.io.abstractions.wrappers.20.0.4.nupkg.sha512"
+    },
+    "YamlDotNet/13.7.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-X4m1PnFcJwvAj1sCDMntg/eZcX96CJLrWMiYnq41KqhFVZPuw63ZTSxIGqgdCwHWHvCAyTxheELC/VDf1HsU2A==",
+      "path": "yamldotnet/13.7.1",
+      "hashPath": "yamldotnet.13.7.1.nupkg.sha512"
+    },
+    "CSharpier.Core/0.28.2": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CSharpier/0.28.2.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
