@@ -151,7 +151,7 @@ function add_wincopy() {
 }
 
 function install_postgres_lsp() {
-
+    echo "not yet"
 }
 
 function install_cargo_rust() {
