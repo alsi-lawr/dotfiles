@@ -37,13 +37,10 @@ return {
 				"docker_compose_language_service",
 				"jsonls",
 				"marksman",
-				"spectral",
-				"phpactor",
 				"powershell_es",
 				"sqlls",
 				"somesass_ls",
 				"bashls",
-				"pyright",
 			},
 		})
 
@@ -51,14 +48,10 @@ return {
 			ensure_installed = {
 				"prettier", -- prettier formatter
 				"stylua", -- lua formatter
-				"isort", -- python formatter
-				"black", -- python formatter
 				"pylint",
 				"eslint_d",
-				-- "csharpier",
+				"csharpier",
 				"netcoredbg",
-				"chrome-debug-adapter",
-				"firefox-debug-adapter",
 				"markdownlint",
 				"editorconfig-checker",
 			},

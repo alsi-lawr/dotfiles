@@ -6,8 +6,7 @@ return {
 		"hrsh7th/cmp-path",
 		{
 			"L3MON4D3/luasnip",
-			version = "v2.*",
-			builder = "make install_jsregexp",
+			run = "make install_jsregexp",
 		},
 		"saadparwaiz1/cmp_luasnip",
 		"rafamadriz/friendly-snippets",

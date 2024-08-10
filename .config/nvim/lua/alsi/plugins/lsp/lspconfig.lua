@@ -33,10 +33,14 @@ local on_attach = function(client, bufnr)
 	keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts) -- show diagnostics for line
 
 	opts.desc = "Go to previous diagnostic"
-	keymap.set("n", "[d", vim.diagnostic.goto_prev, opts) -- jump to previous diagnostic in buffer
+	keymap.set("n", "[d", function()
+		vim.diagnostic.jump({ count = -1 })
+	end, opts) -- jump to previous diagnostic in buffer
 
 	opts.desc = "Go to next diagnostic"
-	keymap.set("n", "]d", vim.diagnostic.goto_next, opts) -- jump to next diagnostic in buffer
+	keymap.set("n", "]d", function()
+		vim.diagnostic.jump({ count = 1 })
+	end, opts) -- jump to next diagnostic in buffer
 
 	opts.desc = "Show documentation for what is under cursor"
 	keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
@@ -68,11 +72,19 @@ return {
 		local capabilities = cmp_nvim_lsp.default_capabilities()
 
 		-- Change the Diagnostic symbols in the sign column (gutter)
-		local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
-		for type, icon in pairs(signs) do
-			local hl = "DiagnosticSign" .. type
-			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
-		end
+		vim.diagnostic.config({
+			signs = {
+				text = {
+					[vim.diagnostic.severity.ERROR] = "",
+					[vim.diagnostic.severity.WARN] = "",
+					[vim.diagnostic.severity.INFO] = "",
+					[vim.diagnostic.severity.HINT] = "󰠠",
+				},
+			},
+			jump = { float = true },
+			underline = { severity = vim.diagnostic.severity.INFO },
+			update_in_insert = true,
+		})
 
 		mason_lspconfig.setup_handlers({
 			-- default handler for installed servers
