@@ -1,6 +1,6 @@
 .rustup/
 .cargo
-custom-lsp/
+custom-lsp/*
 !custom-lsp/roslyn/
 !custom-lsp/rzls/
 temp/
