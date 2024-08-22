@@ -8,7 +8,7 @@ alias re-source="source $SHARED_CONF/.zshrc"
 alias tree="ls --tree"
 alias nvimkeybind="zsh $SHARED_CONF/scripts/nvim_keybind.sh"
 alias gdev="git clone --branch develop"
-
+alias docker-compose="docker compose"
 function refreshssh(){
     eval $(ssh-agent -s) > /dev/null
 

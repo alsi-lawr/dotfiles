@@ -1,15 +1,15 @@
 -- Function to close nvim-tree if it's the last window
-local function close_nvim_tree_if_last()
-	vim.defer_fn(function()
-		local wins = vim.api.nvim_tabpage_list_wins(0)
-		if #wins == 1 then
-			local buf_ft = vim.bo[vim.api.nvim_win_get_buf(wins[1])].filetype
-			if buf_ft == "NvimTree" then
-				vim.cmd("quit")
-			end
-		end
-	end, 50)
-end
+-- local function close_nvim_tree_if_last()
+-- 	vim.defer_fn(function()
+-- 		local wins = vim.api.nvim_tabpage_list_wins(0)
+-- 		if #wins == 1 then
+-- 			local buf_ft = vim.bo[vim.api.nvim_win_get_buf(wins[1])].filetype
+-- 			if buf_ft == "NvimTree" then
+-- 				vim.cmd("quit")
+-- 			end
+-- 		end
+-- 	end, 50)
+-- end
 
 return {
 	"nvim-tree/nvim-tree.lua",
@@ -55,14 +55,14 @@ return {
 			},
 		})
 
-		-- Create an autocommand group
-		vim.api.nvim_create_augroup("CloseNvimTreeIfLast", { clear = true })
-
-		-- Set up the autocommand
-		vim.api.nvim_create_autocmd("WinLeave", {
-			group = "CloseNvimTreeIfLast",
-			callback = close_nvim_tree_if_last,
-		})
+		-- -- Create an autocommand group
+		-- vim.api.nvim_create_augroup("CloseNvimTreeIfLast", { clear = true })
+		--
+		-- -- Set up the autocommand
+		-- vim.api.nvim_create_autocmd("WinLeave", {
+		-- 	group = "CloseNvimTreeIfLast",
+		-- 	callback = close_nvim_tree_if_last,
+		-- })
 		-- keymaps
 		local keymap = vim.keymap -- brevity
 

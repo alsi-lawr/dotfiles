@@ -125,19 +125,5 @@ return {
 				})
 			end,
 		})
-
-		-- manually installed servers
-		-- require("roslyn").setup({
-		-- 	config = {
-		-- 		capabilities = capabilities,
-		-- 		on_attach = on_attach,
-		-- 		filetypes = { "cs", "razor", "cshtml" },
-		-- 	},
-		-- 	exe = {
-		-- 		"dotnet",
-		-- 		"/usr/share/config/custom-lsp/roslyn/Microsoft.CodeAnalysis.LanguageServer.dll",
-		-- 	},
-		-- 	filewatching = true,
-		-- })
 	end,
 }
