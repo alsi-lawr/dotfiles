@@ -55,14 +55,15 @@ return {
 			},
 		})
 
-		-- -- Create an autocommand group
+		-- Create an autocommand group
 		-- vim.api.nvim_create_augroup("CloseNvimTreeIfLast", { clear = true })
-		--
-		-- -- Set up the autocommand
+
+		-- Set up the autocommand
 		-- vim.api.nvim_create_autocmd("WinLeave", {
 		-- 	group = "CloseNvimTreeIfLast",
 		-- 	callback = close_nvim_tree_if_last,
 		-- })
+
 		-- keymaps
 		local keymap = vim.keymap -- brevity
 

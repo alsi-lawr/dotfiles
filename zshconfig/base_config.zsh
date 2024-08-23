@@ -38,6 +38,7 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+export PATH="/usr/bin:$PATH"
 
 # ---- git ----
 export GIT_CONFIG_SYSTEM=$SHARED_CONF/gitconfig
